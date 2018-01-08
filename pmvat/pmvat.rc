@@ -1,0 +1,432 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#ifndef APSTUDIO_INVOKED
+#include "targetver.h"
+#endif
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// English (U.S.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#ifndef APSTUDIO_INVOKED\r\n"
+    "#include ""targetver.h""\r\n"
+    "#endif\r\n"
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "#define _AFX_NO_OLE_RESOURCES\r\n"
+    "#define _AFX_NO_TRACKER_RESOURCES\r\n"
+    "#define _AFX_NO_PROPERTY_RESOURCES\r\n"
+    "\r\n"
+    "#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)\r\n"
+    "LANGUAGE 9, 1\r\n"
+    "#pragma code_page(1252)\r\n"
+    "#include ""res\\Pmvat.rc2""  // non-Microsoft Visual C++ edited resources\r\n"
+    "#include ""afxres.rc""         // Standard components\r\n"
+    "#endif\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDR_MAINFRAME           ICON                    "res\\Pmvat.ico"
+IDR_PEATTYPE            ICON                    "res\\PmvatDoc.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Menu
+//
+
+IDR_MAINFRAME MENU 
+BEGIN
+    POPUP "&File"
+    BEGIN
+        MENUITEM "&Save\tCtrl+S",               ID_FILE_SAVE
+        MENUITEM "Save As...",                  ID_FILE_SAVEAS
+        MENUITEM SEPARATOR
+        MENUITEM "E&xit",                       ID_APP_EXIT
+    END
+    POPUP "&Edit"
+    BEGIN
+        MENUITEM "&Copy\tCtrl+C",               ID_EDIT_COPY
+    END
+    POPUP "&View"
+    BEGIN
+        MENUITEM "Refresh\tF5",                 ID_VIEW_REFRESH
+        MENUITEM SEPARATOR
+        MENUITEM "&Status Bar",                 ID_VIEW_STATUS_BAR
+    END
+    POPUP "Privileges"
+    BEGIN
+        MENUITEM "Act as Operating System",     ID_PRIVILEGES_TCB
+        MENUITEM "Assign Primary Token",        ID_PRIVILEGES_ASSIGNPRIMARYTOKEN
+        MENUITEM "Backup Files",                ID_PRIVILEGES_BACKUP
+        MENUITEM "Debug Programs",              ID_PRIVILEGES_DEBUG
+        MENUITEM "Security Log/Audit",          ID_PRIVILEGES_SECURITY
+    END
+    POPUP "A&ttack"
+    BEGIN
+        MENUITEM "Squat",                       ID_ATTACK_SQUAT, INACTIVE
+        MENUITEM "Squat All",                   ID_ATTACK_SQUATALL
+        MENUITEM "Freeform Squat",              ID_ATTACK_FREEFORM
+        MENUITEM SEPARATOR
+        MENUITEM "Cancel",                      ID_ATTACK_CANCEL, INACTIVE
+        MENUITEM "Release",                     ID_ATTACK_RELEASE, INACTIVE
+        MENUITEM "Abandon",                     ID_ATTACK_ABANDON, INACTIVE
+        MENUITEM SEPARATOR
+        MENUITEM "Cancel All",                  ID_ATTACK_CANCELALL, INACTIVE
+        MENUITEM "Release All",                 ID_ATTACK_RELEASEALL, INACTIVE
+        MENUITEM "Abandon All",                 ID_ATTACK_ABANDONALL, INACTIVE
+        MENUITEM SEPARATOR
+        MENUITEM "Release All (Timed)",         ID_ATTACK_TIMEDRELEASE, INACTIVE
+        MENUITEM "Abandon All (Timed)",         ID_ATTACK_TIMEDABANDON
+        MENUITEM SEPARATOR
+        MENUITEM "Clear Completed",             ID_ATTACK_CLEARCOMPLETE, INACTIVE
+    END
+    POPUP "&Help"
+    BEGIN
+        MENUITEM "&About Process Mutex Attack Tool...", ID_APP_ABOUT
+        MENUITEM SEPARATOR
+        MENUITEM "License Agreement",           ID_APP_LICENSE
+    END
+END
+
+IDR_MENU_EDIT MENU 
+BEGIN
+    POPUP "Log"
+    BEGIN
+        MENUITEM "Copy All",                    ID_EDIT_COPYALL
+        MENUITEM SEPARATOR
+        MENUITEM "Clear All",                   ID_EDIT_CLEARALL
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Accelerator
+//
+
+IDR_MAINFRAME ACCELERATORS 
+BEGIN
+    "C",            ID_EDIT_COPY,           VIRTKEY, CONTROL, NOINVERT
+    VK_INSERT,      ID_EDIT_COPY,           VIRTKEY, CONTROL, NOINVERT
+    "A",            ID_EDIT_SELECT_ALL,     VIRTKEY, CONTROL, NOINVERT
+    VK_F6,          ID_NEXT_PANE,           VIRTKEY, NOINVERT
+    VK_F6,          ID_PREV_PANE,           VIRTKEY, SHIFT, NOINVERT
+    VK_F5,          ID_VIEW_REFRESH,        VIRTKEY, NOINVERT
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_ABOUTBOX DIALOGEX 0, 0, 299, 110
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "About Process Mutex Attack Tool"
+FONT 8, "MS Shell Dlg", 0, 0, 0x1
+BEGIN
+    ICON            IDR_MAINFRAME,IDC_STATIC,14,14,21,20
+    DEFPUSHBUTTON   "OK",IDOK,242,89,50,14,WS_GROUP
+    LTEXT           "Product",IDC_LABEL_PRODUCT,45,11,247,8
+    LTEXT           "Version",IDC_LABEL_VERSION,45,23,247,8
+    LTEXT           "Company",IDC_LABEL_COMPANY,45,53,247,8
+    LTEXT           "Copyright",IDC_LABEL_COPYRIGHT,45,65,247,8
+    LTEXT           "Website",IDC_LABEL_WEBSITE,45,77,247,8
+    LTEXT           "Built",IDC_LABEL_BUILD,45,36,247,8
+END
+
+IDD_FREEFORMDLG DIALOGEX 0, 0, 320, 118
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Freeform Mutex Name"
+FONT 8, "MS Shell Dlg", 0, 0, 0x0
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,209,97,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,263,97,50,14
+    LTEXT           "Static",IDC_LABEL_INSTRUCTIONS,7,7,306,64
+    EDITTEXT        IDC_EDIT_FREEFORM_NAME,7,77,306,15,ES_AUTOHSCROLL
+END
+
+IDD_EULA DIALOGEX 0, 0, 316, 184
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Dialog"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    CONTROL         "",IDC_RICHEDIT_EULA,"RichEdit20W",WS_BORDER | WS_TABSTOP | 0x884,7,7,302,149
+    PUSHBUTTON      "Accept",IDC_BUTTON_ACCEPT,197,162,54,16
+    DEFPUSHBUTTON   "Decline",IDC_BUTTON_DECLINE,255,161,54,16
+END
+
+IDD_UPDATEWARNDLG DIALOGEX 0, 0, 175, 60
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Update Check"
+FONT 8, "MS Shell Dlg", 0, 0, 0x0
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,63,39,50,14
+    LTEXT           "A version update check is about to begin.",IDC_STATIC,7,7,161,12
+    CONTROL         "Do not bother me again",IDC_CHECK_NOSHOW,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,7,22,161,12
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 5,2,0,0
+ PRODUCTVERSION 5,2,0,0
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x1L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "040904e4"
+        BEGIN
+            VALUE "Comments", "Process Mutex Attack and Security Analysis Tool"
+            VALUE "CompanyName", "Software Integrity - www.softwareintegrity.com"
+            VALUE "FileDescription", "Process Mutex Attack and Security Analysis Tool"
+            VALUE "FileVersion", "5.2.0.000-0000"
+            VALUE "InternalName", "Pmvat.exe"
+            VALUE "LegalCopyright", "Copyright © 2008-2009 Software Integrity.  All rights reserved."
+            VALUE "OriginalFilename", "Pmvat.exe"
+            VALUE "ProductName", "Process Mutex Attack Tool"
+            VALUE "ProductVersion", "5.2.0.000-0000"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x409, 1252
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO 
+BEGIN
+    IDD_ABOUTBOX, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 292
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 103
+    END
+
+    IDD_FREEFORMDLG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 313
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 111
+    END
+
+    IDD_EULA, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 309
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 177
+    END
+
+    IDD_UPDATEWARNDLG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 313
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 193
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXT
+//
+
+IDR_EULA_TEXT           TEXT                    "res\\Eula.txt"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE 
+BEGIN
+    IDP_OLE_INIT_FAILED     "OLE initialization failed.  Make sure that the OLE libraries are the correct version."
+    ID_INDICATOR_MUTANT_TOTAL "XXXXXXXXX"
+    ID_INDICATOR_MUTANT_NAMED "XXXXXXXXXX"
+    ID_INDICATOR_MUTANT_UNNAMED "XXXXXXXXXXXX"
+    ID_INDICATOR_USER       "XXXXXXXXXXXXXXXXXXXX"
+    IDP_SOCKETS_INIT_FAILED "Windows sockets initialization failed."
+END
+
+STRINGTABLE 
+BEGIN
+    IDR_MAINFRAME           "Process Mutex Attack Tool\n\nPmvat\n\n\n\n"
+END
+
+STRINGTABLE 
+BEGIN
+    AFX_IDS_APP_TITLE       "Process Mutex Attack Tool"
+    AFX_IDS_IDLEMESSAGE     "Ready"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_APP_ABOUT            "Display program information, version number and copyright\nAbout"
+    ID_APP_EXIT             "Quit the application; prompts to save documents\nExit"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_NEXT_PANE            "Switch to the next window pane\nNext Pane"
+    ID_PREV_PANE            "Switch back to the previous window pane\nPrevious Pane"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_EDIT_CLEAR           "Erase the selection\nErase"
+    ID_EDIT_CLEAR_ALL       "Erase everything\nErase All"
+    ID_EDIT_COPY            "Copy the selection and put it on the Clipboard\nCopy"
+    ID_EDIT_CUT             "Cut the selection and put it on the Clipboard\nCut"
+    ID_EDIT_FIND            "Find the specified text\nFind"
+    ID_EDIT_PASTE           "Insert Clipboard contents\nPaste"
+    ID_EDIT_REPEAT          "Repeat the last action\nRepeat"
+    ID_EDIT_REPLACE         "Replace specific text with different text\nReplace"
+    ID_EDIT_SELECT_ALL      "Select the entire document\nSelect All"
+    ID_EDIT_UNDO            "Undo the last action\nUndo"
+    ID_EDIT_REDO            "Redo the previously undone action\nRedo"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_VIEW_STATUS_BAR      "Show or hide the status bar\nToggle StatusBar"
+    ID_VIEW_AUTOARRANGE     "Arrange icons on a grid."
+END
+
+STRINGTABLE 
+BEGIN
+    AFX_IDS_SCSIZE          "Change the window size"
+    AFX_IDS_SCMOVE          "Change the window position"
+    AFX_IDS_SCMINIMIZE      "Reduce the window to an icon"
+    AFX_IDS_SCMAXIMIZE      "Enlarge the window to full size"
+    AFX_IDS_SCNEXTWINDOW    "Switch to the next document window"
+    AFX_IDS_SCPREVWINDOW    "Switch to the previous document window"
+    AFX_IDS_SCCLOSE         "Close the active window and prompts to save the documents"
+END
+
+STRINGTABLE 
+BEGIN
+    AFX_IDS_SCRESTORE       "Restore the window to normal size"
+    AFX_IDS_SCTASKLIST      "Activate Task List"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_VIEW_SMALLICON       "Display items by using small icons.\nSmall Icons"
+    ID_VIEW_LARGEICON       "Display items by using large icons.\nLarge Icons"
+    ID_VIEW_LIST            "Displays items in a list.\nList"
+    ID_VIEW_DETAILS         "Displays detailed information about each item in the window.\nDetails"
+    ID_VIEW_LINEUP          "Arranges icons in a grid."
+    ID_VIEW_BYNAME          "Sorts the icons alphabetically."
+END
+
+STRINGTABLE 
+BEGIN
+    ID_FILE_SAVEAS          "Save the log output"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_FILE_SAVE            "Save the log output"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_PRIVILEGES_DEBUG     "Enables the 'Debug programs' privilege if the right is granted in the Local Security Policy"
+    ID_PRIVILEGES_BACKUP    "Enables the 'Backup files and folders' privilege if the right is granted in the Local Security Policy"
+    ID_PRIVILEGES_ASSIGNPRIMARYTOKEN 
+                            "Enables the 'Assign Primary Token' privilege if the right is granted in the Local Security Policy"
+    ID_PRIVILEGES_TCB       "Enables the 'Act as part of the Operating System' privilege if the right is granted in the Local Security Policy"
+    ID_PRIVILEGES_SECURITY  "Enables the 'Security audit' privilege if the right is granted in the Local Security Policy"
+END
+
+#endif    // English (U.S.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+#define _AFX_NO_OLE_RESOURCES
+#define _AFX_NO_TRACKER_RESOURCES
+#define _AFX_NO_PROPERTY_RESOURCES
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+LANGUAGE 9, 1
+#pragma code_page(1252)
+#include "res\Pmvat.rc2"  // non-Microsoft Visual C++ edited resources
+#include "afxres.rc"         // Standard components
+#endif
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+
