@@ -36,14 +36,15 @@ CInfoView::~CInfoView()
     ASSERT( NULL != m_pfuncs );
 }
 
-CInfoView::CInfoView(): m_fontHeight(0)
+CInfoView::CInfoView() : m_fontHeight(0)
 {
     m_whiteBrush.CreateSolidBrush( RGB(255,255,255) );
 
     LOGFONT lf;
+    ZeroMemory( &lf, sizeof(lf) );
+
     if( !SystemParametersInfo( SPI_GETICONTITLELOGFONT, sizeof(lf), &lf, 0 ) )
     {
-        ZeroMemory( &lf, sizeof(lf) );
         lf.lfWidth = 9;
         StringCchCopy( lf.lfFaceName, _countof(lf.lfFaceName), L"Shell UI" );
     }
